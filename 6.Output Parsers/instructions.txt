@@ -1,0 +1,8 @@
+What is an Output Parser?
+
+
+An Output Parser is like a translator.
+
+When you ask an AI model a question, it gives you a response — usually plain text. But sometimes, you don’t want just text, you want it in a specific format (like a dictionary, list, JSON, or even a Python class).
+
+That’s where an Output Parser comes in — it takes the raw text output and converts it into a structured format that you can easily work with in Python.
