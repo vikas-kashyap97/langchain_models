@@ -1,0 +1,14 @@
+langchain-core
+langchain
+openai
+langchain-anthropic
+langchain-google-genai
+google-generativeai
+huggingface-hub
+transformers
+python-dotenv
+numpy
+scikit-learn
+
+
+# for activating venv - .\venv\Scripts\Activate.ps1

@@ -1,0 +1,37 @@
+ When & Why to Use Each One
+
+🔷 TypedDict — Use when:
+
+You want lightweight type hints for dictionaries (especially for static type checking).
+
+You're building tools with no runtime validation but need structure for editors (like VS Code).
+
+Perfect for quick prototyping or libraries where runtime performance matters more than validation.
+
+🔷 Pydantic — Use when:
+
+You need runtime data validation and parsing in Python (e.g., API inputs, config files).
+
+You want automatic type coercion, defaults, and validation with clean code.
+
+Great for FastAPI, data pipelines, or structured outputs from LLMs like LangChain.
+
+🔷 JSON Schema — Use when:
+
+You are defining data formats for external communication, like REST APIs.
+
+You want language-agnostic validation (used across JavaScript, Python, Java, etc.).
+
+Ideal for interoperability, API documentation (OpenAPI), and cross-system contracts.
+
+
+Feature                       	TypedDict (Python stdlib)                  	Pydantic (Python library)                            	JSON Schema (Language-agnostic)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Basic Features               	Type hints for dictionaries ✅             Data parsing and validation using Python models ✅      Declarative format to describe structure of JSON data ✅
+Type Enforcement             	Static (checked with tools like mypy) ✅   Strong runtime enforcement ✅                           Runtime validation via validators (e.g., in APIs/tools) ✅
+Data Validation              	No runtime validation ❌                   Yes (types, ranges, regex, etc.) ✅                     Yes (with schema-based validation rules) ✅
+Default Values               	No (handled manually) ❌                   Yes (default values and computed fields) ✅             Yes (via "default" keyword) ✅
+Automatic Conversion         	No ❌                                      Yes (e.g., str to int where valid) ✅                   Partial (depends on library used) ❌
+Cross-language Compatibility	No ❌                                      No (Python-specific) ❌                                 Yes (used in REST APIs, OpenAPI, GraphQL, etc.) ✅
+
+
