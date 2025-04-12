@@ -1,8 +1,47 @@
-What is an Output Parser?
-
-
+1. What is an Output Parser?
 An Output Parser is like a translator.
-
 When you ask an AI model a question, it gives you a response — usually plain text. But sometimes, you don’t want just text, you want it in a specific format (like a dictionary, list, JSON, or even a Python class).
-
 That’s where an Output Parser comes in — it takes the raw text output and converts it into a structured format that you can easily work with in Python.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
+2. String Output Parser (StrOutputParser)
+This converts the model's output into plain text so we can use it in the next step. 
+[from langchain_core.output_parsers import StrOutputParser]
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
+3. JSON Output Parser (JsonOutputParser)
+This converts the model's output into JSON (like a Python dictionary), so we can easily access specific fields in the response.
+[from langchain_core.output_parsers import JsonOutputParser]
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
+4. Structured Output Parser (StructuredOutputParser)
+This parses the model’s output into a structured dictionary based on a predefined schema, making it easy to access specific fields.
+[from langchain.output_parsers import StructuredOutputParser, ResponseSchema]
+
+⚠️ Disadvantage:
+It doesn't perform strict data validation — if the model returns missing fields, extra fields, or slightly incorrect structures, the parser may still accept it without raising clear errors. So for critical applications, additional manual validation or error handling is recommended.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
+5. Pydantic Output Parser (PydanticOutputParser)
+This parser uses Pydantic models to strictly enforce the structure and types of the output, providing robust validation and clean integration with your Python code.
+[from langchain.output_parsers import PydanticOutputParser]
+
+✅ Why Use PydanticOutputParser?
+
+1. Strict Schema Enforcement - Pydantic ensures that the model's output strictly follows the structure you define — if any fields are missing, extra, or incorrectly formatted, it will raise an error instead of silently passing invalid data.
+
+2. Type Safety - Every field in the output can be defined with a data type (like str, int, bool), and Pydantic will automatically enforce this at runtime.
+
+3. Easy Validation - You can include custom validators and constraints (e.g., string length, number ranges) directly in your model for more control over the data quality.
+
+4. Seamless Integration - Parsed output is returned as a Pydantic model instance — which means you get features like autocomplete, validation methods, serialization (.json()), and more, right out of the box.
+
+_________________________________________________________________________________________________________________________________________________________________________________
