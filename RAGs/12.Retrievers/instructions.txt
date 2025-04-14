@@ -1,0 +1,73 @@
+ What are Retrievers in AI or Machine Learning?
+
+Retrievers are like super-smart librarians.
+Imagine you walk into a giant library and ask,
+
+“Hey, where can I find information about dinosaurs?”
+
+A Retriever is the one who quickly searches through all the books and picks out the most relevant ones for you to read. It doesn’t write new information — it just finds the best existing stuff.
+
+Why do we need Retrievers?
+In AI systems (especially in chatbots, search engines, or question-answering systems), sometimes the AI needs help to find the right documents, files, or pieces of text before it can answer your question properly.
+
+So the process looks like this:
+
+1. You ask a question
+→ "Tell me about black holes."
+
+2. Retriever kicks in
+→ Finds 3 articles or chunks of text about black holes.
+
+3. The AI reads those
+→ Then generates a nice answer using that info.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+Types of Retrievers-
+
+Document-based: Looks through text documents (articles, PDFs, etc.).
+
+Database-based: Looks through organized data in a database (like customer info or product details).
+
+Search Engine-based: Uses search engines to find info on the web.
+
+Knowledge Graph-based: Looks at interconnected data (think of a map of facts).
+
+Web Scraper-based: Automatically collects info from websites.
+
+Custom Data Source-based: Searches in specialized, custom-built databases or sources.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+1. Wikipedia Retriever
+
+A Wikipedia Retriever is a system or tool that searches Wikipedia for relevant articles or sections of articles based on a user’s query. It's like asking an AI to go into the Wikipedia library and bring you the most accurate and up-to-date article or information on a specific topic.
+
+How Does It Work?
+1. You ask a question:
+
+Example: “Who was Albert Einstein?”
+
+2. The retriever looks through Wikipedia's vast collection of articles. Wikipedia has millions of articles, and the retriever is trained to pick out relevant parts of them quickly.
+
+3. It fetches the most relevant article(s):
+
+4. For the question “Who was Albert Einstein?” the retriever will pull up the page about Albert Einstein and return important facts, such as his biography, major achievements, and contributions to science.
+
+The answer is provided to you based on the retrieved information, which might come in the form of a summary or key facts from the Wikipedia article.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
+What is a Vector Store Retriever?
+A Vector Store Retriever is the tool that:
+
+1. Takes your query, turns it into a vector (using an embedding model),
+2. Searches the vector store, and
+3. Retrieves the most similar pieces of information (documents, paragraphs, etc.)
+
+You can think of it like a search engine that works by understanding meaning.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
