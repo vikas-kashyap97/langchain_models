@@ -1,0 +1,111 @@
+1. What is a Text Loader?
+A text loader is a tool that helps you read and bring the content of a text file into your program so you can work with it.
+
+Imagine you have a .txt file with a poem, a story, or any kind of text saved on your computer. If you want your program (especially in AI or data projects) to understand or analyze what's inside that file, you need a way to "load" or fetch that text into your app — that’s exactly what a text loader does.
+
+In short:
+
+A text loader is like a bridge between your text file and your program — it opens the file, reads the content, and makes it usable inside your code.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
+2. What is a PDF Loader?
+A PDF loader is a tool that helps your program read and extract text from PDF files so it can understand or work with the content.
+
+PDFs aren’t just plain text — they can be formatted in complex ways with pages, columns, images, etc. So if you want your app (especially in AI or automation) to process information from a PDF — like reading a report, a research paper, or a resume — you need something that can open the file and pull out the actual words from it.
+
+That’s what a PDF loader does:
+
+It opens the PDF, breaks it down page by page, and gives your program clean access to the text inside.
+
+Think of it like a digital assistant that reads the PDF for you and hands over the important stuff in a way your code can understand.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+3. What is a Directory Loader?
+A directory loader is a tool that helps your program automatically go through a folder and load multiple files — like PDFs, text files, or other documents — all at once.
+
+Instead of loading one file at a time, the directory loader can scan an entire folder and grab all the files that match a certain type (like “all PDF files” or “all .txt files”), and then bring their content into your program for further use.
+
+So, if you have a folder full of research papers, articles, or reports, a directory loader:
+
+Finds those files, reads them one by one, and gives your program access to all the content — quickly and easily.
+
+It’s like telling your program:
+
+“Hey, here’s a whole folder — go in there, grab all the files that match this type, and read them for me.”
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+What is a WebBase Loader?
+A WebBase loader is a tool that allows your program to go to a specific webpage and extract the content from it so your app can use or analyze that information.
+
+Websites are full of data like product descriptions, blog posts, news articles, or reviews. But to use that data in a program, you need a way to access the content of that webpage and bring it into your app. That’s what a WebBase loader does!
+
+In short:
+
+A WebBase loader acts like a web browser for your program — it visits a webpage, grabs the text, and makes it ready for your code to work with.
+
+For example, if you want to pull product details or news articles from the web, you can use this loader to automatically read the page content and bring it into your system, just like opening a page in a browser and reading it yourself.
+
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+What is a CSV Loader?
+A CSV loader is a tool that helps your program read and load data from CSV files into your application for further use.
+
+CSV stands for Comma Separated Values, and it’s a common file format used for storing tabular data (like spreadsheets or simple databases). Each row in a CSV file represents a record, and the columns represent the different pieces of data related to that record (like name, age, price, etc.).
+
+A CSV loader:
+
+Opens the CSV file, reads each row of data, and turns it into a format that your program can easily work with.
+
+For example, if you have a CSV file with a list of products, prices, and descriptions, the CSV loader helps your program read that list, so you can analyze, filter, or process the data, all without having to manually open and look through the file.
+
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
+Glob Patterns for File Loading-
+
+Pattern         | What It Loads
+----------------|---------------------------------------------
+*.txt           | All text files in the folder (e.g., notes.txt, data.txt)
+*.pdf           | All PDF files (e.g., report.pdf, paper1.pdf)
+*.docx          | All Word documents (e.g., resume.docx, project.docx)
+*.csv           | All CSV files (e.g., data.csv, records.csv)
+*.json          | All JSON files (e.g., config.json, data.json)
+*.md            | All Markdown files (e.g., README.md, notes.md)
+*.*             | All files of any type in the folder
+data_*.txt      | All text files starting with "data_" (e.g., data_1.txt, data_2024.txt)
+report_??.pdf   | PDF files named like "report_01.pdf", "report_23.pdf" (two characters after underscore)
+docs/*.txt      | All `.txt` files in the "docs" subfolder
+**/*.txt        | All `.txt` files in the folder and all subfolders (recursive)
+
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
+load() vs lazy_load() – What’s the Difference?
+
+Function        | Description
+----------------|----------------------------------------------------------
+load()          | Loads all documents **immediately** into memory.
+                | Best when you have a **small number of files** or content.
+                | Returns a full list of document objects.
+                | ✅ Easy to use
+                | ⚠️ Might use a lot of memory for large files or folders
+
+lazy_load()     | Loads documents **one at a time**, as you need them.
+                | Best for **large files** or **many documents**.
+                | Returns a **generator** (you loop through it).
+                | ✅ More memory-efficient
+                | ⚠️ Slightly more complex to use (you have to iterate)
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
+You can find the full list of all document loaders available in LangChain — including loaders for PDFs, text files, web pages, YouTube transcripts, Google Docs, Notion, CSVs, and many more — right here:
+
+🔗 [LangChain Document Loaders Documentation](https://python.langchain.com/docs/integrations/document_loaders/)
