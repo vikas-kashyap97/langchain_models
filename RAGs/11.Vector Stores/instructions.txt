@@ -1,0 +1,38 @@
+What are Vector stores?
+Vector stores (also called vector databases) are specialized data storage systems designed to store and manage high-dimensional vector embeddings — numerical representations of data such as text, images, or audio — for fast and efficient similarity search.
+
+These are often used in AI and ML applications, especially those involving natural language processing (NLP) and retrieval-augmented generation (RAG), where finding similar vectors quickly and accurately is critical.
+
+
+Key Features of Vector Stores-
+
+1. Storage
+- Stores high-dimensional vectors (e.g., 512, 768, or more dimensions).
+- In-memory or persistent storage: Some vector stores keep data in-memory (faster, less scalable), others persist it to disk.
+- On-disk storage: Some vector stores use disk storage for durability and large-scale use.
+
+2. Similarity Search
+Fast nearest neighbor (k-NN) search in high-dimensional space.
+
+Supports various similarity metrics:
+- Cosine similarity
+- Euclidean (L2) distance
+- Inner product (dot product)
+
+3. Indexing
+- Indexes are built to accelerate search (e.g., IVF, HNSW, PQ).
+- Can trade off between speed and accuracy.
+- Some systems support dynamic indexing (adding/removing vectors after initial creation).
+
+4. CRUD Operations
+- Manage the lifecycle of data - adding new vectors, reading them, updating existing entries, removing outdated vectors.
+
+Use-Cases
+1. Semantic Search
+2. RAG (Retrieval-Augmented Generation)
+3. Recommendation Systems
+4. Image/Multimedia Search
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
