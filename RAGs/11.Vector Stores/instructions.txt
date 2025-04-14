@@ -36,3 +36,32 @@ Use-Cases
 _________________________________________________________________________________________________________________________________________________________________________________
 
 
+vector store vs vector database
+
+Storage Purpose      | Vector stores are often used to store small to medium-sized collections of embeddings in memory. 
+                     | Vector databases are designed to handle large-scale, persistent storage of embeddings across disk or distributed systems.
+
+Scale                | Vector stores are ideal for simple applications or prototyping where scalability isn’t a concern. 
+                     | Vector databases are better suited for production-level applications with high-volume data and user traffic.
+
+Performance          | Vector stores operate faster for smaller datasets since everything is in memory. 
+                     | Vector databases optimize performance for large datasets with indexing and sharding capabilities.
+
+Features             | Vector stores typically have basic search (like similarity search using cosine distance). 
+                     | Vector databases support advanced search, filtering, metadata querying, and sometimes hybrid search (text + vector).
+
+Persistence          | Vector stores are usually in-memory and data is lost after the session ends unless saved manually. 
+                     | Vector databases persist data permanently and can recover from crashes or restarts.
+
+Integration          | Vector stores are often part of Python libraries (e.g., FAISS, Chroma) and work directly with code. 
+                     | Vector databases can be standalone systems (like Pinecone, Weaviate, Qdrant) and are accessed via APIs or clients.
+
+Ease of Use          | Vector stores are simpler to set up for local development. 
+                     | Vector databases require more setup but are more powerful and reliable for enterprise use.
+
+Use Case             | Use vector stores for quick experiments, demos, or small-scale apps. 
+                     | Use vector databases for real-world applications, large-scale search systems, and enterprise-grade tools.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
