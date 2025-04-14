@@ -11,4 +11,4 @@ numpy
 scikit-learn
 
 
-# for activating venv - .\venv\Scripts\Activate.ps1
+# for activating venv - .\venv\Scripts\Activate
