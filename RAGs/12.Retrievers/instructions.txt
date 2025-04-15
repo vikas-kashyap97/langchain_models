@@ -70,4 +70,19 @@ You can think of it like a search engine that works by understanding meaning.
 
 _________________________________________________________________________________________________________________________________________________________________________________
 
+What is MMR (Maximal Marginal Relevance)?
+"How can we pick results that are not only relevant to the query but also different from each other?"
+MMR is a smart method used when you're selecting things (like search results, documents, or text chunks) and you want two things:
+
+Relevance – pick items that are highly relevant to the question or topic.
+Diversity – avoid picking items that say the same thing over and over.
+
+Think of it like building a playlist. You want:
+
+Songs you like (relevant to your taste),
+But not all sounding the same (diversity).
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
 
