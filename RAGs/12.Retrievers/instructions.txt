@@ -84,5 +84,79 @@ But not all sounding the same (diversity).
 
 _________________________________________________________________________________________________________________________________________________________________________________
 
+What is a Multi-Query Retriever?
+A Multi-Query Retriever is a tool or method used in information retrieval (like search engines or AI systems) where multiple different versions of the same question are created to get better and more complete results from a large set of documents or data.
 
+Why would you do that?
+Imagine you’re looking for information about "How to treat a headache", but someone else might phrase the same thing as:
 
+"Best remedies for headaches"
+"Natural treatments for head pain"
+"What helps with headaches?"
+
+Each version (or query) might return slightly different but useful information.
+
+Instead of just searching with your original question, a Multi-Query Retriever sends several versions of your question, gathers results from all of them, and combines those results to give you a smarter, more complete answer.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+What is a Contextual Compression Retriever?
+Imagine you ask your AI assistant a question like:
+
+“How does meditation help with focus?”
+
+Now, your system may retrieve some documents that are:
+
+kinda useful (somewhat related)
+too long (paragraphs full of fluff)
+or just not focused enough
+
+A Contextual Compression Retriever comes in and says:
+
+"Let me grab the most relevant parts of those documents and compress them down to just what you need based on your question."
+
+It's like a smart filter that cleans up messy or long data based on the context of your query.
+
+What Problem Does It Solve?
+Without compression:
+
+You may pull full documents or big chunks of text
+A lot of it may be irrelevant
+It can confuse or overwhelm your LLM (especially with token limits)
+
+With Contextual Compression:
+
+It trims down and focuses only on what matters for your question
+Helps your LLM give more accurate and concise answers
+Saves tokens (and costs!)
+
+How Does It Work?
+Retriever gets some relevant documents (maybe 5 or 10).
+
+Compressor goes through each and asks:
+
+“Does this part really help answer the question?”
+
+It keeps only the useful parts — maybe a sentence or two from each document.
+
+The cleaned-up, compressed snippets go to your LLM to answer the question.
+
+Tools used for compression:
+
+Language models (e.g. Gemini, GPT, etc.)
+Algorithms like LLMChainExtractor or DocumentCompressorPipeline
+
+When Should You Use It?
+Use Contextual Compression Retriever when:
+
+Your documents are long or noisy
+Your answers need to be precise
+You’re hitting token limits
+You're dealing with overlapping or unrelated information
+
+Don’t need it when:
+
+You already have short, highly focused chunks
+You're okay with your LLM reading the whole doc
+
+_________________________________________________________________________________________________________________________________________________________________________________

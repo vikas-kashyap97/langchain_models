@@ -10,7 +10,7 @@ docs = [
     Document(page_content="The Python programming language is widely used for web development, data analysis, artificial intelligence, and scientific computing."),
 ]
 
-embedding_model = GoogleGenerativeAIEmbeddings(model="gemini-1.5-flash-latest")
+embedding_model = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 
 vectorstore = FAISS.from_documents(
     documents=docs,
