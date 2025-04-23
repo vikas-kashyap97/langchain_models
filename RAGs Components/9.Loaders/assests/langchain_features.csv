@@ -1,0 +1,51 @@
+ID,Feature,Description
+1,TextLoader,Loads text data from a file into your program.
+2,PDFLoader,Extracts content from PDF files into your program.
+3,DirectoryLoader,Loads multiple files from a directory at once.
+4,WebBaseLoader,Extracts data from a specified webpage.
+5,PromptTemplate,Creates a template for generating prompts dynamically.
+6,StrOutputParser,Parses the output as a string for further processing.
+7,LangChain,Framework for orchestrating workflows with language models.
+8,Rasa,Open-source conversational AI for building chatbots.
+9,Vosk,Offline voice recognition for building voice interfaces.
+10,PyAutoGUI,Automates GUI interactions in Python.
+11,spaCy,NLP library for advanced text processing and analysis.
+12,TextBlob,Python library for processing textual data and sentiment analysis.
+13,Recurrent,Framework for working with recurrent neural networks.
+14,YOLOv5,Real-time object detection with deep learning.
+15,OpenCV,Library for computer vision tasks like image processing.
+16,DeepFace,Facial recognition framework built on deep learning.
+17,Gemini,Google's large-scale AI model for advanced text generation.
+18,LiteLLM,Lightweight model management framework for LLMs.
+19,HubSpot API,CRM platform for managing customer relationships.
+20,LinkedIn Profile API,Extracts public LinkedIn profile data via API.
+21,Serper API,Real-time web search API for gathering online data.
+22,LangGraph,Orchestration framework for AI-powered workflows.
+23,Convex.dev,Real-time database framework for handling live data.
+24,Clerk.com,User authentication and management platform.
+25,Razorpay,Payment gateway for subscription-based monetization.
+26,Next.js,Framework for building full-stack React applications.
+27,ShadCN UI,Design system for building modern user interfaces.
+28,Tailwind CSS,Utility-first CSS framework for rapidly building custom UIs.
+29,React,JavaScript library for building user interfaces.
+30,Vite,Next-generation build tool for modern web projects.
+31,Streamlit,Framework for creating interactive data apps with Python.
+32,Python,A versatile programming language for AI and web development.
+33,GitHub Actions,Automation platform for CI/CD workflows.
+34,Figma,Design tool for UI/UX development.
+35,Django,High-level Python web framework for building applications.
+36,Flask,Micro web framework for Python.
+37,Jupyter Notebooks,Web-based interactive computing environment.
+38,GraphQL,Query language for APIs and runtime for executing those queries.
+39,SQLAlchemy,SQL toolkit for Python.
+40,MongoDB,NoSQL database for scalable and flexible storage.
+41,Supabase,Open-source backend-as-a-service platform.
+42,Firebase,Platform for building mobile and web applications.
+43,Zapier,Automation tool to connect different apps and workflows.
+44,AWS,Cloud computing platform by Amazon.
+45,Google Cloud,Cloud computing services by Google.
+46,Azure,Cloud services platform by Microsoft.
+47,Docker,Platform for developing and running applications inside containers.
+48,Kubernetes,Open-source platform for automating the deployment of applications.
+49,Terraform,Infrastructure as code for automating cloud provisioning.
+50,Ansible,IT automation tool for configuration management and deployment.

@@ -1,0 +1,18 @@
+langchain-core
+langchain
+langchain-deepseek
+langchain-community
+langchain-google-genai
+google-generativeai
+langchain-anthropic
+openai
+huggingface-hub
+transformers
+python-dotenv
+numpy
+scikit-learn
+faiss-cpu
+youtube-transcript-api
+
+
+# for activating venv - .\venv\Scripts\Activate

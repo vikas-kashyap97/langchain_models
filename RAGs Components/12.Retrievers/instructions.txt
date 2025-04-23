@@ -1,0 +1,162 @@
+ What are Retrievers in AI or Machine Learning?
+
+Retrievers are like super-smart librarians.
+Imagine you walk into a giant library and ask,
+
+“Hey, where can I find information about dinosaurs?”
+
+A Retriever is the one who quickly searches through all the books and picks out the most relevant ones for you to read. It doesn’t write new information — it just finds the best existing stuff.
+
+Why do we need Retrievers?
+In AI systems (especially in chatbots, search engines, or question-answering systems), sometimes the AI needs help to find the right documents, files, or pieces of text before it can answer your question properly.
+
+So the process looks like this:
+
+1. You ask a question
+→ "Tell me about black holes."
+
+2. Retriever kicks in
+→ Finds 3 articles or chunks of text about black holes.
+
+3. The AI reads those
+→ Then generates a nice answer using that info.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+Types of Retrievers-
+
+Document-based: Looks through text documents (articles, PDFs, etc.).
+
+Database-based: Looks through organized data in a database (like customer info or product details).
+
+Search Engine-based: Uses search engines to find info on the web.
+
+Knowledge Graph-based: Looks at interconnected data (think of a map of facts).
+
+Web Scraper-based: Automatically collects info from websites.
+
+Custom Data Source-based: Searches in specialized, custom-built databases or sources.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+1. Wikipedia Retriever
+
+A Wikipedia Retriever is a system or tool that searches Wikipedia for relevant articles or sections of articles based on a user’s query. It's like asking an AI to go into the Wikipedia library and bring you the most accurate and up-to-date article or information on a specific topic.
+
+How Does It Work?
+1. You ask a question:
+
+Example: “Who was Albert Einstein?”
+
+2. The retriever looks through Wikipedia's vast collection of articles. Wikipedia has millions of articles, and the retriever is trained to pick out relevant parts of them quickly.
+
+3. It fetches the most relevant article(s):
+
+4. For the question “Who was Albert Einstein?” the retriever will pull up the page about Albert Einstein and return important facts, such as his biography, major achievements, and contributions to science.
+
+The answer is provided to you based on the retrieved information, which might come in the form of a summary or key facts from the Wikipedia article.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
+What is a Vector Store Retriever?
+A Vector Store Retriever is the tool that:
+
+1. Takes your query, turns it into a vector (using an embedding model),
+2. Searches the vector store, and
+3. Retrieves the most similar pieces of information (documents, paragraphs, etc.)
+
+You can think of it like a search engine that works by understanding meaning.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+What is MMR (Maximal Marginal Relevance)?
+"How can we pick results that are not only relevant to the query but also different from each other?"
+MMR is a smart method used when you're selecting things (like search results, documents, or text chunks) and you want two things:
+
+Relevance – pick items that are highly relevant to the question or topic.
+Diversity – avoid picking items that say the same thing over and over.
+
+Think of it like building a playlist. You want:
+
+Songs you like (relevant to your taste),
+But not all sounding the same (diversity).
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+What is a Multi-Query Retriever?
+A Multi-Query Retriever is a tool or method used in information retrieval (like search engines or AI systems) where multiple different versions of the same question are created to get better and more complete results from a large set of documents or data.
+
+Why would you do that?
+Imagine you’re looking for information about "How to treat a headache", but someone else might phrase the same thing as:
+
+"Best remedies for headaches"
+"Natural treatments for head pain"
+"What helps with headaches?"
+
+Each version (or query) might return slightly different but useful information.
+
+Instead of just searching with your original question, a Multi-Query Retriever sends several versions of your question, gathers results from all of them, and combines those results to give you a smarter, more complete answer.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+What is a Contextual Compression Retriever?
+Imagine you ask your AI assistant a question like:
+
+“How does meditation help with focus?”
+
+Now, your system may retrieve some documents that are:
+
+kinda useful (somewhat related)
+too long (paragraphs full of fluff)
+or just not focused enough
+
+A Contextual Compression Retriever comes in and says:
+
+"Let me grab the most relevant parts of those documents and compress them down to just what you need based on your question."
+
+It's like a smart filter that cleans up messy or long data based on the context of your query.
+
+What Problem Does It Solve?
+Without compression:
+
+You may pull full documents or big chunks of text
+A lot of it may be irrelevant
+It can confuse or overwhelm your LLM (especially with token limits)
+
+With Contextual Compression:
+
+It trims down and focuses only on what matters for your question
+Helps your LLM give more accurate and concise answers
+Saves tokens (and costs!)
+
+How Does It Work?
+Retriever gets some relevant documents (maybe 5 or 10).
+
+Compressor goes through each and asks:
+
+“Does this part really help answer the question?”
+
+It keeps only the useful parts — maybe a sentence or two from each document.
+
+The cleaned-up, compressed snippets go to your LLM to answer the question.
+
+Tools used for compression:
+
+Language models (e.g. Gemini, GPT, etc.)
+Algorithms like LLMChainExtractor or DocumentCompressorPipeline
+
+When Should You Use It?
+Use Contextual Compression Retriever when:
+
+Your documents are long or noisy
+Your answers need to be precise
+You’re hitting token limits
+You're dealing with overlapping or unrelated information
+
+Don’t need it when:
+
+You already have short, highly focused chunks
+You're okay with your LLM reading the whole doc
+
+_________________________________________________________________________________________________________________________________________________________________________________

@@ -1,0 +1,138 @@
+What is LCEL?
+
+Answer:
+LCEL stands for LangChain Expression Language. It's a simple way to connect different parts of a program together—like a pipeline.
+
+Imagine you're building a machine where one part gives you a prompt, the next part sends it to an AI model, then another part cleans up the output, and so on. LCEL lets you chain all these parts in a clean, readable way—like stacking blocks.
+
+Instead of writing long, complex code, you can just use the | symbol to connect each step. That makes it easier to build and understand workflows that involve AI models, prompts, and output formatting.
+
+In short:
+LCEL = Easy way to link steps together when working with AI.
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+ What is RunnableBranch?
+
+Answer:
+RunnableBranch is like a smart decision-maker in a LangChain workflow.
+
+Imagine you're in a situation where your AI pipeline needs to choose between two different paths based on a condition. That's what RunnableBranch does—it checks a condition (like a yes/no question) and then decides which step to run next.
+
+In your code example, it checks if the text has more than 500 words.
+
+✅ If yes, it runs a summarization step.
+
+❌ If no, it just returns the text as-is (does nothing special).
+
+You can think of it like this:
+
+"If the report is long, summarize it.
+If it's short, leave it alone."
+
+So in simple terms:
+RunnableBranch lets your AI pipeline make choices based on the input.
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+
+What is RunnableLambda?
+
+Answer:
+RunnableLambda is a way to run your own custom Python function inside a LangChain workflow.
+
+Let’s say you want to do something simple—like count the number of words in some text. That’s not something an AI model needs to do, right? You can just write a small Python function for that and use RunnableLambda to plug it into the chain.
+
+In your code, the word_count function counts the words in the joke, and RunnableLambda(word_count) lets you add that logic directly into your AI workflow.
+
+Think of it like this:
+
+"Hey LangChain, run this little custom function here before moving on."
+
+So, in simple terms:
+RunnableLambda lets you use your own Python code as part of the AI pipeline.
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+
+ What is RunnableParallel?
+
+Answer:
+RunnableParallel is like a multitasker in LangChain—it lets you run multiple tasks at the same time and then gathers all the results together.
+
+In your example, you’re asking two different models to create two different types of content:
+
+A tweet using one prompt and model
+
+A LinkedIn post using a different prompt and model
+
+With RunnableParallel, both tasks run side by side, not one after the other. It's like saying:
+
+“Hey AI, while you're writing the tweet, also work on the LinkedIn post!”
+
+Then it gives you back both results in a nice dictionary format:
+{
+  'tweet': '...',
+  'linkedIn': '...'
+}
+
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+
+What is RunnablePassthrough?
+
+Answer:
+RunnablePassthrough is the "do nothing" step in a LangChain workflow.
+
+It just takes the input and passes it forward exactly as it is—no changes, no processing, no AI magic. It’s useful when you want to keep some original data flowing through the chain while doing something else in parallel.
+
+In your example:
+
+The joke is passed straight through with RunnablePassthrough().
+
+Meanwhile, another model is busy generating the explanation.
+
+It's like saying:
+
+“Just keep the joke as it is, don’t touch it—I'll also work on explaining it.”
+
+So, in simple terms:
+RunnablePassthrough is a placeholder that sends the input forward unchanged.
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+
+ What is RunnableSequence?
+
+Answer:
+RunnableSequence is like a step-by-step workflow in LangChain. It lets you run a chain of operations one after the other, just like a production line.
+
+Each step takes the output from the previous one and passes it to the next. This is super useful when you want to build a logical flow—like generating content first, then doing something with it afterward.
+
+In your example:
+
+It creates a joke about a topic.
+
+Then it explains the joke.
+
+That whole process is stitched together with RunnableSequence, so it flows like:
+
+Prompt → Model → Output → New Prompt → Model again → Final Output
+
+So, in simple terms:
+RunnableSequence runs a series of steps one after another, using the output of each step as the input for the next.
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+
+✅ Best All-Rounder: RunnableSequence
+If you’re building typical AI workflows where one step depends on the output of the previous step (which is very common), then RunnableSequence is the most versatile and essential.
+
+Why?
+
+It allows you to build structured, logical pipelines.
+
+You can plug in prompts, models, parsers, custom logic—whatever you need—in a clean, readable order.
+
+Most real-world use cases (e.g., generate → summarize → analyze → output) follow this step-by-step pattern.

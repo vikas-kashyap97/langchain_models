@@ -1,0 +1,67 @@
+What are Vector stores?
+Vector stores (also called vector databases) are specialized data storage systems designed to store and manage high-dimensional vector embeddings — numerical representations of data such as text, images, or audio — for fast and efficient similarity search.
+
+These are often used in AI and ML applications, especially those involving natural language processing (NLP) and retrieval-augmented generation (RAG), where finding similar vectors quickly and accurately is critical.
+
+
+Key Features of Vector Stores-
+
+1. Storage
+- Stores high-dimensional vectors (e.g., 512, 768, or more dimensions).
+- In-memory or persistent storage: Some vector stores keep data in-memory (faster, less scalable), others persist it to disk.
+- On-disk storage: Some vector stores use disk storage for durability and large-scale use.
+
+2. Similarity Search
+Fast nearest neighbor (k-NN) search in high-dimensional space.
+
+Supports various similarity metrics:
+- Cosine similarity
+- Euclidean (L2) distance
+- Inner product (dot product)
+
+3. Indexing
+- Indexes are built to accelerate search (e.g., IVF, HNSW, PQ).
+- Can trade off between speed and accuracy.
+- Some systems support dynamic indexing (adding/removing vectors after initial creation).
+
+4. CRUD Operations
+- Manage the lifecycle of data - adding new vectors, reading them, updating existing entries, removing outdated vectors.
+
+Use-Cases
+1. Semantic Search
+2. RAG (Retrieval-Augmented Generation)
+3. Recommendation Systems
+4. Image/Multimedia Search
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
+vector store vs vector database
+
+Storage Purpose      | Vector stores are often used to store small to medium-sized collections of embeddings in memory. 
+                     | Vector databases are designed to handle large-scale, persistent storage of embeddings across disk or distributed systems.
+
+Scale                | Vector stores are ideal for simple applications or prototyping where scalability isn’t a concern. 
+                     | Vector databases are better suited for production-level applications with high-volume data and user traffic.
+
+Performance          | Vector stores operate faster for smaller datasets since everything is in memory. 
+                     | Vector databases optimize performance for large datasets with indexing and sharding capabilities.
+
+Features             | Vector stores typically have basic search (like similarity search using cosine distance). 
+                     | Vector databases support advanced search, filtering, metadata querying, and sometimes hybrid search (text + vector).
+
+Persistence          | Vector stores are usually in-memory and data is lost after the session ends unless saved manually. 
+                     | Vector databases persist data permanently and can recover from crashes or restarts.
+
+Integration          | Vector stores are often part of Python libraries (e.g., FAISS, Chroma) and work directly with code. 
+                     | Vector databases can be standalone systems (like Pinecone, Weaviate, Qdrant) and are accessed via APIs or clients.
+
+Ease of Use          | Vector stores are simpler to set up for local development. 
+                     | Vector databases require more setup but are more powerful and reliable for enterprise use.
+
+Use Case             | Use vector stores for quick experiments, demos, or small-scale apps. 
+                     | Use vector databases for real-world applications, large-scale search systems, and enterprise-grade tools.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
