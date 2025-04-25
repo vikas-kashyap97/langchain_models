@@ -21,3 +21,4 @@ youtube-transcript-api
 
 
 # for activating venv - .\venv\Scripts\Activate
+>>>>>>> 2b1c4721dbfeec06507596b2c499f79aefe6f393

@@ -65,7 +65,7 @@ answer = llm.invoke(final_prompt)
 print(answer.content)
 
 
-# Using Chain Method
+# Using Chain Method with parser
 
 
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough, RunnableLambda
