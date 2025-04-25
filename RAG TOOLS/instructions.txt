@@ -1,0 +1,80 @@
+What is a "Tool"?
+
+A tool is just a Pyhton function (or API) that is packaged in a way the LLM can understand and call when needed.
+
+LLMs(like GPT) are great at:
+.Reasoning (Think)
+.Language generation (Speak)
+
+But they can not do things like:
+.Access live data (weather, news)
+.Do reliable maths
+.Call APIs
+.Run Code
+.Interact with a database
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+In Python, tools can generally be divided into two types: built-in tools and custom tools.
+
+Built-in tools => 
+are the ones that come pre-installed with Python. You don’t need to download or install anything extra to use them. These include built-in functions like print(), len(), and type(), as well as modules like math, datetime, and os. They are designed to help with common tasks like math operations, working with files, dates, and more. Since they’re built into Python itself, they’re fast, reliable, and widely used.
+
+custom tools => 
+are tools created by developers for specific tasks. These can be third-party libraries (like pandas, requests, or numpy) that you install using tools like pip, or even functions and modules you write yourself for a personal project. Custom tools give you flexibility and power to solve unique problems, automate repetitive tasks, or create something totally new. However, they usually require a bit of setup or installation, and you need to make sure they are maintained or compatible with your project.
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+
+What is a Custom Tool using @tool?
+A custom tool using @tool in Python is like creating your own little helper that LangChain can use to do something specific — like math, sending messages, or searching the web.
+
+You start by writing a regular Python function (like one that multiplies two numbers), then you add @tool above it. This special decorator tells LangChain, “Hey, this function is now a tool you can call and use!”
+
+So instead of just being a normal function, it becomes something smart that LangChain or AI agents can understand, describe, and use automatically — just like built-in tools.
+
+It’s a way of turning your code into a plug-and-play tool for smarter systems!
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+
+What is a Structured Tool?
+A structured tool in Python (especially when using LangChain) is a special kind of tool that knows exactly what kind of information it needs, and it's usually defined using something called a Pydantic model.
+
+Think of it like filling out a form. The form tells you:
+
+What questions need to be answered (like name, age, or email)
+
+What kind of answers are allowed (like only numbers or text)
+
+A structured tool works the same way. The Pydantic model is like the form—it defines what inputs the tool needs, what type they should be (like numbers, strings, etc.), and makes sure the inputs are valid before the tool runs.
+
+So in simple terms:
+
+A structured tool is a tool that uses a clear structure (via Pydantic) to describe what info it needs to work properly.
+
+This helps the tool be smarter, more reliable, and easier for other programs (or people) to use.
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+
+What is a Base Tool in LangChain?
+A Base Tool is like a blueprint or a starting point for creating your own tools in LangChain. Think of it like a basic template or skeleton that has the rules and structure already set — you just fill in the details to make it do what you want.
+
+It's used when you want more control over how your tool works, especially if you’re building something a bit more advanced. Instead of just adding a @tool to a function, you can use Base Tool to customize things like how inputs are handled, how errors are managed, or how the tool talks to other parts of your app.
+
+So in short:
+👉 Base Tool = A customizable base class for making your own smart tools in LangChain.
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+What is a Toolkit (in Python or LangChain)?
+A toolkit is like a ready-made box of tools that are grouped together to help you do a specific kind of job.
+
+Think of it like this: if you want to fix a bike, you don’t bring a hammer and a kitchen spoon — you bring a bike repair toolkit, which includes everything you need for that task.
+
+In the same way, in coding (especially with things like LangChain), a toolkit is a collection of tools that work together to help you do a certain task — like searching the web, using a calculator, talking to a database, or even building a chatbot.
+
+Instead of creating each tool one by one, you just grab the toolkit and use what’s inside.
+
+________________________________________________________________________________________________________________________________________________________________________________
