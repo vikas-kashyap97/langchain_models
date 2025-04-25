@@ -1,31 +1,23 @@
 langchain-core
 langchain
-<<<<<<< HEAD
 langchain-deepseek
 langchain-community
 langchain-google-genai
 google-generativeai
 langchain-anthropic
 openai
-=======
 openai
 langchain-anthropic
 langchain-google-genai
 google-generativeai
->>>>>>> 2b1c4721dbfeec06507596b2c499f79aefe6f393
 huggingface-hub
 transformers
 python-dotenv
 numpy
 scikit-learn
-<<<<<<< HEAD
 faiss-cpu
 youtube-transcript-api
 
 
-# for activating venv - .\venv\Scripts\Activate
-=======
-
 
 # for activating venv - .\venv\Scripts\Activate
->>>>>>> 2b1c4721dbfeec06507596b2c499f79aefe6f393

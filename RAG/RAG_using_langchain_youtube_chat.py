@@ -9,7 +9,6 @@ from langchain_core.prompts import PromptTemplate
 
 load_dotenv()
 
-
 llm = ChatDeepSeek(
     model="deepseek-r1-distill-llama-70b",
 )
@@ -77,7 +76,7 @@ def format_docs(retrived_docs):
     return context_text
 
 parallel_chain = RunnableParallel({
-    'context': retriver | RunnableLambda(format_docs),
+    'context': retriever | RunnableLambda(format_docs),
     'question': RunnablePassthrough()
 })
 
