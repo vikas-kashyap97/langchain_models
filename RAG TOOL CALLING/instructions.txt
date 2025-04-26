@@ -1,0 +1,16 @@
+What is tool binding?
+In LangChain, tool binding just means connecting a tool (like a calculator, web search, database lookup, etc.) to an AI agent, so the agent can use that tool automatically while talking to you. Tool binding is just hooking up useful tools to an AI so it can use them smartly during a conversation.
+
+Think of it like this:
+The AI is a person.
+The tool is a hammer, or a phone, or a map.
+
+Tool binding is like handing the AI the tool and teaching it how and when to use it.
+
+=======> Name → What is this tool called?
+=======> Description → When should the AI use it?
+=======> Input Schema → What info must the AI provide to make it work?
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+
