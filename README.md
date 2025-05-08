@@ -1,7 +1,7 @@
 # LangChain Models Repository
 
 Welcome to the **LangChain Models** repository by [vikas-kashyap97](https://github.com/vikas-kashyap97).  
-This repository contains modular implementations and examples for working with **Large Language Models (LLMs)** and **Retrieval-Augmented Generation (RAG)** using the [LangChain](https://github.com/langchain-ai/langchain) framework.
+This repository contains modular implementations and examples for working with **Large Language Models (LLMs)** and **Retrieval-Augmented Generation (RAG)** using the [LangChain](https://github.com/vikas-kashyap97/langchain_models.git) framework.
 
 ---
 
